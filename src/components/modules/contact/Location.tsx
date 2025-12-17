@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { InteractiveMap } from './InteractiveMap';
 
 export const Location = () => {
   return (
@@ -18,8 +19,8 @@ export const Location = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-codary-black dark:text-white">Dirección</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Av. Tecnología 123, Edificio Innova, Piso 4</p>
-                  <p className="text-gray-600 dark:text-gray-400">Ciudad Código, CP 12345</p>
+                  <p className="text-gray-600 dark:text-gray-400">Vargas Machuca, Cuenca</p>
+                  <p className="text-gray-600 dark:text-gray-400">Cuenca, Ecuador</p>
                 </div>
               </div>
 
@@ -33,26 +34,20 @@ export const Location = () => {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-4">  
                 <div className="bg-pastel-lavender/30 dark:bg-purple-900/30 p-3 rounded-lg">
                   <Phone className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <div>
                   <h3 className="font-bold text-codary-black dark:text-white">Teléfono</h3>
-                  <p className="text-gray-600 dark:text-gray-400">+1 234 567 890</p>
+                  <p className="text-gray-600 dark:text-gray-400">+593 999 999 999</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="h-96 bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg relative border border-gray-100 dark:border-gray-700">
-            {/* Simulated Map */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-300 dark:bg-gray-700">
-              <p className="text-gray-500 dark:text-gray-400 font-bold text-xl">Mapa Interactivo (Simulado)</p>
-            </div>
-            <div className="absolute bottom-4 right-4 bg-white dark:bg-gray-800 p-2 rounded shadow text-xs text-gray-500 dark:text-gray-400">
-              Google Maps Placeholder
-            </div>
+          <div className="h-96 bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg relative border border-gray-100 dark:border-gray-700 z-0">
+            <InteractiveMap />
           </div>
         </div>
       </div>
