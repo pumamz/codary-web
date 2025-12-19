@@ -38,7 +38,7 @@ export const Technologies = () => {
   return (
     <section className="py-24 bg-transparent transition-colors duration-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -53,19 +53,19 @@ export const Technologies = () => {
         <div className="animate-marquee whitespace-nowrap flex space-x-16 py-4">
           {[...technologies, ...technologies].map((tech, index) => (
             <div key={`${tech.name}-${index}`} className="flex flex-col items-center space-y-4 mx-6">
-              <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-md flex items-center justify-center hover:scale-110 transition-transform duration-300 border border-gray-100 dark:border-gray-700">
-                <tech.icon className={`h-10 w-10 ${tech.color}`} />
+              <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-md flex items-center justify-center hover:scale-110 transition-transform duration-300 border border-gray-100 dark:border-gray-700 group">
+                <tech.icon className={`h-10 w-10 ${tech.color} grayscale group-hover:grayscale-0 transition-all duration-300`} />
               </div>
               <span className="font-semibold text-gray-600 dark:text-gray-300">{tech.name}</span>
             </div>
           ))}
         </div>
-        
+
         <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex space-x-16 py-4">
-           {[...technologies, ...technologies].map((tech, index) => (
+          {[...technologies, ...technologies].map((tech, index) => (
             <div key={`${tech.name}-duplicate-${index}`} className="flex flex-col items-center space-y-4 mx-6">
-              <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-md flex items-center justify-center hover:scale-110 transition-transform duration-300 border border-gray-100 dark:border-gray-700">
-                <tech.icon className={`h-10 w-10 ${tech.color}`} />
+              <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-md flex items-center justify-center hover:scale-110 transition-transform duration-300 border border-gray-100 dark:border-gray-700 group">
+                <tech.icon className={`h-10 w-10 ${tech.color} grayscale group-hover:grayscale-0 transition-all duration-300`} />
               </div>
               <span className="font-semibold text-gray-600 dark:text-gray-300">{tech.name}</span>
             </div>
